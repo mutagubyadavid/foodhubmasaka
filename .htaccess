@@ -1,0 +1,9 @@
+# Food Hub Masaka - basic Apache settings
+Options -Indexes
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+# Hide server files
+<FilesMatch "\.(sql|md|log|ini|bak)$">
+    Require all denied
+</FilesMatch>
